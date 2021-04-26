@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+
+.wrapper {
+  border: solid 1px black;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('./image/background01.png');
+  overflow: hidden;
+}
+
+.score {
+  font-size: 150px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+.countdown {
+  position: absolute;
+  top: 500px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+ 
+button {
+  background: rgb(195, 210, 215);
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 5px;
+  z-index: 200;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.start-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.game {
+  border: 2px solid black;
+  width: 600px;
+  height: 400px;
+  margin: 70px auto;
+  z-index: 200;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* need img to hide */
+.spot {
+  border: black 2px solid;
+  flex: 1 0 33.33%;
+  position: relative;
+  overflow: hidden;
+}
+/* sand url needed */
+.spot:after {
+content: '';
+display: block;
+background-image: url();
+position: absolute;
+width: 100%;
+height: 70px;
+z-index: 2;
+bottom: -30px;
+background-size: contain;
+}
+
+.gnome {
+  background-image: url('./image/gnorm01-t.png');
+  position: absolute;
+  /* top: 0; */
+  top: 100%; 
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.gnome.small {
+  background-size: 60%;
+}
+
+.gnome.large {
+  background-size: 80%;
+}
+
+.spot.up .gnome {
+top: 0;
+}
+
+/* modal */
+.about-btn {
+  z-index: 0;
+  position: fixed;
+  top: 5%;
+  left: 35%;
+}
+.modal-open {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.95);
+  background:  rgb(181, 196, 193);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  min-height: 40vh;
+  min-width: 55vw;
+  overflow: auto;
+}
+.modal-open.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+
+}
+.mod-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 40px;
+  color:rgb(76, 76, 97);
+}
+.modal-content {
+  padding: 20px 50px;
+  font-size: 30px;
+  background: #fff;
+  border: solid 10px rgb(151, 159, 169);
+}
+.modal-close-btn {
+  position: relative;
+  margin-top: 40px;
+  padding: 10px 50px;
+}
+
+/* z-index is usable only with position... */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.7;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+}
+.mask.active {
+  opacity: 0.7;
+  visibility: visible;
+}

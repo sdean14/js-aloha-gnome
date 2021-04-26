@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aloha gnome</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+  <div >
+    <button class='about-btn' id="about-btn">about</button>
+    <div class="modal-open" id='modal-open'>
+      <div class="modal-content">
+        <h2 class="mod-title">aloha gnome</h2>
+        <p>Gnomes are hiding somewhere in the screen.</p>
+        <p>Put ahola shirt on them when they appear by clicking the gnome!</p>
+        <p>How many gnomes can you put aloha shirt on?</p>
+        <button class="modal-close-btn" id='modal-close-btn'>close</button>
+      </div>
+    </div>
+    <div class="mask" id='mask'></div>
+  </div>
+
+  <div class='wrapper'>
+    <div class='score'>0</div>
+    <div class="countdown"></div>
+    <button class='start-btn'>start</button>
+
+    <div class='game'>
+      <div class="spot spot1">
+        <div class="gnome small"></div>
+      </div> 
+      <div class="spot spot2">
+        <div class="gnome small"></div>
+      </div>
+      <div class="spot spot3">
+        <div class="gnome small"></div>
+      </div>
+      <div class="spot spot4">
+        <div class="gnome large"></div>
+      </div>
+      <div class="spot spot5">
+        <div class="gnome large"></div>
+      </div>
+      <div class="spot spot6">
+        <div class="gnome large"></div>
+      </div> 
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
