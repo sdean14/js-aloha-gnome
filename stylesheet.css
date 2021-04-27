@@ -17,7 +17,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url('./image/background01.png');
+  background-image: url('./image/background02.png');
   overflow: hidden;
 }
 
@@ -50,27 +50,27 @@ button {
   font-weight: 700;
   padding: 15px 40px;
   border-radius: 5px;
-  z-index: 200;
   cursor: pointer;
   border: none;
   outline: none;
 }
 .start-btn {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  top: 5%;
+  left: 55%;
   transform: translate(-50%, 0);
 }
 
 .game {
   border: 2px solid black;
-  width: 600px;
-  height: 400px;
-  margin: 70px auto;
+  width: 800px;
+  height: 500px;
+  margin-top: 97px;
   z-index: 200;
   display: flex;
   flex-wrap: wrap;
 }
+
 
 /* need img to hide */
 .spot {
@@ -80,42 +80,211 @@ button {
   overflow: hidden;
 }
 /* sand url needed */
-.spot:after {
+.spot1:after {
+  content: '';
+  display: block;
+  background-image: url('./image/fixedpine.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  z-index: 2;
+  bottom: -5%;
+  left: 35%;
+  background-size: contain;
+  overflow: visible;
+}
+
+.spot2:after{
+  content: '';
+  display: block;
+  background-image: url('./image/backwaterglass-t02.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  right: -20%;
+  left: auto;
+  width: 80%;
+  height: 80%;
+  bottom: 1%;
+  background-size: contain;
+}
+
+/* custus 3 5 */
+.spot3:after {
 content: '';
 display: block;
-background-image: url();
+background-image: url('./image/backgrass.png');
+background-repeat: no-repeat;
 position: absolute;
-width: 100%;
-height: 70px;
+width: 120%;
+height: 120%;
 z-index: 2;
-bottom: -30px;
+bottom: -20%;
+left: 40%;
 background-size: contain;
 }
+/* 4 right */
+.spot4:after {
+  content: '';
+  display: block;
+  background-image: url('./image/leftrock.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 259%;
+  height: 200%;
+  z-index: 2;
+  bottom: -25%;
+  left: -21%;
+  background-size: contain;
+  }
+
+  .spot5:after{
+    content: '';
+    display: block;
+    background-image: url('./image/midgrass.png');
+    background-repeat:no-repeat;
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+    width: 80%;
+    height: 80%;
+    bottom: -3%;
+    background-size: contain;
+  }
+  /* 6 right left */
+.spot6:after{
+  content: '';
+  display: block;
+  background-image: url('./image/cactus-tt.png');
+  background-repeat:no-repeat;
+  position: absolute;
+  z-index: 2;
+  left: 36%;
+  width: 130%;
+  height: 130%;
+  bottom: 7%;
+  background-size: contain;
+}
+/* 7 top or tight */
+.spot7:after{
+  content: '';
+  display: block;
+  background-image: url('./image/waterglass-t02.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  left: 20%;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background-size: contain;
+}
+
+.spot8:after{
+  content: '';
+  display: block;
+  background-image: url('./image/waterglass-t02.png');
+  background-repeat: round;
+  position: absolute;
+  z-index: 2;
+  right: 1%;
+  width: 100%;
+  height: 100%;
+}
+.spot9:after{
+  content: '';
+  display: block;
+  background-image: url('./image/waterglass-grass.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  height: 90%;
+  right: 45%;
+  bottom: 1%;
+}
+
 
 .gnome {
   background-image: url('./image/gnorm01-t.png');
   position: absolute;
-  /* top: 0; */
-  top: 100%; 
+  /* top: -30%; */
+  
+  /* top: 100%;  */
   width: 100%;
-  height: 100%;
+  height: 120%;
   transition: 0.4s;
   background-repeat: no-repeat;
   background-position: bottom;
+  overflow: visible;
 }
 
-.gnome.small {
-  background-size: 60%;
+/* pop up effct */
+.gnome.small.one {
+  background-size: 50%;
+  left: 30%;
+  top: -20%;
 }
-
+.spot.up .gnome.small.one {
+  left: 0%;
+}
+.gnome.small.two {
+  background-size: 50%;
+  right: -15%;
+  top: 100%;
+}
+.spot.up .gnome.small.two {
+  top: -30%;
+}
+.gnome.small.three {
+  background-size: 50%;
+  left: 100%;
+  top: -20%;
+}
+.spot.up .gnome.small.three {
+  left: 0%;
+}
+.gnome.small.four {
+  background-size: 50%;
+  right: 100%;
+  top: 100%;
+}
+.spot.up .gnome.small.four {
+  right: -38%;
+  top: -35%;
+}
+.gnome.small.five {
+  background-size: 50%;
+  right: -10%;
+  top: 100%;
+}
+.spot.up .gnome.small.five {
+  top: -35%;
+}
+.gnome.small.six {
+  background-size: 50%;
+  left: 100%;
+  top: -28%;
+}
+.spot.up .gnome.small.six {
+  left: -7%;
+}
 .gnome.large {
-  background-size: 80%;
+  background-size: 70%;
+  top: 100%;
 }
-
-.spot.up .gnome {
-top: 0;
+.spot.up .gnome.large {
+  top: -4%;
 }
-
+.gnome.large.nine {
+  background-size: 70%;
+  left: 18%;
+  top: 100%;
+}
+.spot.up .gnome.large.nine {
+  top: -4%;
+}
 /* modal */
 .about-btn {
   z-index: 0;

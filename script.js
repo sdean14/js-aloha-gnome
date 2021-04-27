@@ -21,7 +21,7 @@ function pickRandomSpot(spots) {
 }
 
 function popOut() {
-  const time = Math.random() * 1300 + 400;
+  const time = Math.random() * 1300 + 800;
   const spot = pickRandomSpot(spots);
   spot.classList.add('up');
   setTimeout(function () {
