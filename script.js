@@ -5,6 +5,7 @@ const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
 const aud = new Audio('/audio/Israel _IZ_ Kamakawiwoʻole - Somewhere Over The Rainbow.mp3')
 const addBtn = document.querySelector('.aud-btn');
+const gameOverModal = document.querySelector('.game-over');
 
 let lastSpot;
 let timeUp = false;
@@ -26,7 +27,7 @@ function pickRandomSpot(spots) {
 function popOut() {
   const time = Math.random() * 1300 + 800;
   const spot = pickRandomSpot(spots);
-  spot.classList.add('up');
+  spot.classList.add('up'); 
   setTimeout(function () {
     spot.classList.remove('up')
     if (!timeUp)popOut();
@@ -40,6 +41,7 @@ function startGame() {
   countDownBoard.textContent = countdown;
   timeUp = false;
   score = 0;
+  gameOverModal.classList.remove('up');
   popOut();
   setTimeout(function(){
     timeUp = true;
@@ -52,12 +54,18 @@ function startGame() {
     countDownBoard.textContent = countdown;
     if (countdown < 0) {
       clearInterval(startCountdown);
-      countDownBoard.textContent = 'times up'
+      countDownBoard.textContent = `aloha * ${score} gnomes` 
+      gameOver() 
     }
   }, 1000)
 }
 
 startBtn.addEventListener('click', startGame);
+
+function gameOver() {
+  gameOverModal.classList.add('up');
+
+}
 
 function whack(e) {
   score++;

@@ -80,7 +80,6 @@ button {
   flex: 1 0 33.33%;
   position: relative;
   overflow: hidden;
-
 }
 /* sand url needed */
 .spot1:after {
@@ -372,3 +371,23 @@ background-size: contain;
   visibility: visible;
 }
 
+.game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.95);
+  background:  rgb(181, 196, 193);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  min-height: 40vh;
+  min-width: 55vw;
+  overflow: auto;
+} 
+.game-over.up {
+  opacity: 0.7;
+  visibility: visible;
+}
