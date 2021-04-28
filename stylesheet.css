@@ -23,23 +23,25 @@ body {
 
 .score {
   font-size: 150px;
-  color: black;
+  color: #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 2%;
+  right: -15%;
   transform: translate(-50%, -50%);
   width: 200px;
   height: 100px;
   text-align: center;
+  z-index: 3;
 }
 
 .countdown {
   position: absolute;
-  top: 500px;
+  top: 30px;
   width: 100%;
   font-size: 20px;
   text-align: center;
   color: black;
+  z-index: 3;
 }
  
 button {
@@ -62,11 +64,11 @@ button {
 }
 
 .game {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 800px;
   height: 500px;
   margin-top: 97px;
-  z-index: 200;
+  z-index: 4;
   display: flex;
   flex-wrap: wrap;
 }
@@ -74,10 +76,11 @@ button {
 
 /* need img to hide */
 .spot {
-  border: black 2px solid;
+  /* border: black 2px solid; */
   flex: 1 0 33.33%;
   position: relative;
   overflow: hidden;
+
 }
 /* sand url needed */
 .spot1:after {
@@ -90,7 +93,7 @@ button {
   height: 110%;
   z-index: 2;
   bottom: -5%;
-  left: 35%;
+  left: 52%;
   background-size: contain;
   overflow: visible;
 }
@@ -102,26 +105,26 @@ button {
   background-repeat: no-repeat;
   position: absolute;
   z-index: 2;
-  right: -20%;
-  left: auto;
-  width: 80%;
-  height: 80%;
-  bottom: 1%;
+  right: 5%;
+  /* left: auto; */
+  width: 60%;
+  height: 60%;
+  bottom: -1%;
   background-size: contain;
 }
 
-/* custus 3 5 */
+/* custus cactus 3 5 */
 .spot3:after {
 content: '';
 display: block;
 background-image: url('./image/backgrass.png');
 background-repeat: no-repeat;
 position: absolute;
-width: 120%;
-height: 120%;
-z-index: 2;
+width: 90%;
+height: 90%;
 bottom: -20%;
-left: 40%;
+left: 55%;
+z-index: 2;
 background-size: contain;
 }
 /* 4 right */
@@ -131,11 +134,11 @@ background-size: contain;
   background-image: url('./image/leftrock.png');
   background-repeat: no-repeat;
   position: absolute;
-  width: 259%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   bottom: -25%;
-  left: -21%;
+  left: -15%;
   background-size: contain;
   }
 
@@ -146,10 +149,10 @@ background-size: contain;
     background-repeat:no-repeat;
     position: absolute;
     z-index: 2;
-    left: 20%;
+    left: 14%;
     width: 80%;
     height: 80%;
-    bottom: -3%;
+    bottom: -20%;
     background-size: contain;
   }
   /* 6 right left */
@@ -160,7 +163,7 @@ background-size: contain;
   background-repeat:no-repeat;
   position: absolute;
   z-index: 2;
-  left: 36%;
+  left: 55%;
   width: 130%;
   height: 130%;
   bottom: 7%;
@@ -175,9 +178,9 @@ background-size: contain;
   position: absolute;
   z-index: 2;
   left: 20%;
-  width: 100%;
-  height: 100%;
-  bottom: 0px;
+  width: 65%;
+  height: 65%;
+  bottom: -10px;
   background-size: contain;
 }
 
@@ -189,8 +192,9 @@ background-size: contain;
   position: absolute;
   z-index: 2;
   right: 1%;
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
+  bottom: 1%;
 }
 .spot9:after{
   content: '';
@@ -199,31 +203,30 @@ background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   z-index: 2;
-  width: 80%;
-  height: 90%;
-  right: 45%;
-  bottom: 1%;
+  width: 60%;
+  height: 60%;
+  left: 1%;
+  top: 40%;
 }
 
 
 .gnome {
   background-image: url('./image/gnorm01-t.png');
   position: absolute;
-  /* top: -30%; */
-  
-  /* top: 100%;  */
   width: 100%;
   height: 120%;
   transition: 0.4s;
   background-repeat: no-repeat;
   background-position: bottom;
   overflow: visible;
+  cursor: pointer;
+  z-index: 2;
 }
 
 /* pop up effct */
 .gnome.small.one {
   background-size: 50%;
-  left: 30%;
+  left: 100%;
   top: -20%;
 }
 .spot.up .gnome.small.one {
@@ -276,6 +279,23 @@ background-size: contain;
 }
 .spot.up .gnome.large {
   top: -4%;
+}
+.gnome.large.seven {
+  background-size: 55%;
+  right: 100%;
+  top: 100%;
+}
+.spot.up .gnome.large.seven {
+  right: -30%;
+  top: -30%;
+}
+.gnome.large.eight {
+  background-size: 70%;
+  left: 100%;
+  top: -4%;
+}
+.spot.up .gnome.large.eight {
+  left: -20%;
 }
 .gnome.large.nine {
   background-size: 70%;
@@ -351,3 +371,4 @@ background-size: contain;
   opacity: 0.7;
   visibility: visible;
 }
+

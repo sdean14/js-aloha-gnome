@@ -3,12 +3,15 @@ const scoreBoard = document.querySelector('.score');
 const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
+const aud = new Audio('/audio/Israel _IZ_ Kamakawiwoʻole - Somewhere Over The Rainbow.mp3')
+const addBtn = document.querySelector('.aud-btn');
 
 let lastSpot;
 let timeUp = false;
 let timeLimit = 20000;
 let score = 0;
 let countdown;
+
 
 function pickRandomSpot(spots) {
   const randomSpot = Math.floor(Math.random() * spots.length);
@@ -41,6 +44,8 @@ function startGame() {
   setTimeout(function(){
     timeUp = true;
   }, timeLimit);
+  // aud.play();
+  // aud.loop = true;
 
   let startCountdown = setInterval(function() {
     countdown -= 1;
@@ -48,7 +53,7 @@ function startGame() {
     if (countdown < 0) {
       clearInterval(startCountdown);
       countDownBoard.textContent = 'times up'
-  }
+    }
   }, 1000)
 }
 
