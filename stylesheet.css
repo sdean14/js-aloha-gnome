@@ -66,7 +66,7 @@ button {
 .aud-btn {
   /* position: relative; */
   transform: translate(-50%, 0);
-  background: rgb(255, 78, 98);
+  background: rgb(255, 78, 98); 
 }
 .about-btn {
   z-index: 0;
@@ -424,3 +424,23 @@ background-size: contain;
 .modal-close-btn2 {
   background: rgb(213, 240, 165) ;
 }
+
+.fab-footer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  top: 90%;
+  right: 30%;
+  width: 200px;
+  height: 100px;
+}
+.fa-github {
+  font-size: 50px;
+  color: rgb(255, 78, 98);
+}
+.fa-code-branch {
+  font-size: 50px;
+  color: rgb(46, 207, 202);
+}
+

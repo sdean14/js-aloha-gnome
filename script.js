@@ -87,7 +87,13 @@ audBtn.addEventListener('click', muteUnmute);
 function gameOver() {
   const gameOverDiv = document.getElementById('game-over');
   const numGnomeDiv = document.createElement('div');
-  numGnomeDiv.textContent = `You put aloha shirt on ${score} gnomes!`;
+  if(score === 1) {
+    numGnomeDiv.textContent = `You put an aloha shirt on ${score} gnome!`;
+  } else if (score === 0) {
+    numGnomeDiv.textContent = `Maybe none of those gnomes wanted aloha shirts`;
+  } else {
+    numGnomeDiv.textContent = `You put aloha shirts on ${score} gnomes!`;
+  }
   gameOverDiv.appendChild(numGnomeDiv);
   gameOverModal.classList.add('up');
 }
