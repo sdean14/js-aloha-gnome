@@ -73,8 +73,8 @@ function startGame() {
     countdown -= 1;
     countDownBoard.textContent = countdown;
     if (countdown === 0) {
-      clearInterval(startCountdown);
       gameOver() 
+      clearInterval(startCountdown);
     }
   }, 1000)
 }
