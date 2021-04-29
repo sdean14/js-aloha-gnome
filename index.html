@@ -7,14 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>aloha gnome</title>
   <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" type="image/x-icon" href="image/fav.png">
+
 </head>
 
 <body>
 
-  <audio controls loop src="/audio/Israel _IZ_ Kamakawiwoʻole - Somewhere Over The Rainbow.mp3" ></audio>
-<button  id='aud-btn' class="aud-btn">im button</button>
-  <div>
+  <!-- <audio controls loop src="/audio/Israel _IZ_ Kamakawiwoʻole - Somewhere Over The Rainbow.mp3" ></audio> -->
+  <div class="header-container">
+    <button  id='aud-btn' class="aud-btn">♪</button>
     <button class='about-btn' id="about-btn">about</button>
+    <button class='start-btn'>start</button>
+  </div>
+
+  <div>
     <div class="modal-open" id='modal-open'>
       <div class="modal-content">
         <h2 class="mod-title">aloha gnome</h2>
@@ -27,7 +33,6 @@
     <div class="mask" id='mask'></div>
   </div>
 
-  <button class='start-btn'>start</button>
   <div class='wrapper'>
     <div class='score'>0</div>
     <div class="countdown"></div>
@@ -63,10 +68,11 @@
     </div>
   </div>
 
-  <div class="game-over">
+  <div id="game-over" class="game-over">
     <div>Times Up</div> 
-    <div>Congrats!</div>
-    <div>You have '' aloha gnomes!</div>
+    <div id="congrats" class="congrats">Congrats!</div>
+    <!-- <div>You have '' aloha gnomes!</div> -->
+
   </div>
 
 

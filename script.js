@@ -4,7 +4,7 @@ const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
 const aud = new Audio('/audio/Israel _IZ_ Kamakawiwoʻole - Somewhere Over The Rainbow.mp3')
-const addBtn = document.querySelector('.aud-btn');
+const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over');
 
 let lastSpot;
@@ -12,7 +12,23 @@ let timeUp = false;
 let timeLimit = 20000;
 let score = 0;
 let countdown;
+let audPlay = false;
 
+function muteUnmute() {
+  if (audPlay === true) {
+    aud.pause()    
+    audPlay = false;
+    audBtn.textContent = 'unmute' 
+  } else if (audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
+    aud.play()
+    audPlay = true;
+    audBtn.textContent = 'mute'
+  } else {
+    aud.pause()
+    audPlay = false;
+    audBtn.textContent = 'unmute'
+  }
+}
 
 function pickRandomSpot(spots) {
   const randomSpot = Math.floor(Math.random() * spots.length);
@@ -46,8 +62,11 @@ function startGame() {
   setTimeout(function(){
     timeUp = true;
   }, timeLimit);
-  // aud.play();
-  // aud.loop = true;
+  aud.play();
+  aud.loop = true;
+  audPlay = true;
+  audBtn.textContent = 'mute'
+
 
   let startCountdown = setInterval(function() {
     countdown -= 1;
@@ -61,11 +80,17 @@ function startGame() {
 }
 
 startBtn.addEventListener('click', startGame);
+audBtn.addEventListener('click', muteUnmute);
+
 
 function gameOver() {
+  const gameOverDiv = document.getElementById('game-over');
+  const numGnomeDiv = document.createElement('div');
+  numGnomeDiv.textContent = `You put aloha shirt on ${score} gnomes!`;
+  gameOverDiv.appendChild(numGnomeDiv);
   gameOverModal.classList.add('up');
-
 }
+
 
 function whack(e) {
   score++;
