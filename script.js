@@ -5,7 +5,8 @@ const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
 const aud = new Audio('/audio/Israel _IZ_ Kamakawiwoʻole - Somewhere Over The Rainbow.mp3')
 const audBtn = document.querySelector('.aud-btn');
-const gameOverModal = document.querySelector('.game-over');
+const gameOverModal = document.querySelector('.game-over-container');
+const restartBtn= document.querySelector('.restart-btn');
 
 let lastSpot;
 let timeUp = false;
@@ -71,15 +72,15 @@ function startGame() {
   let startCountdown = setInterval(function() {
     countdown -= 1;
     countDownBoard.textContent = countdown;
-    if (countdown < 0) {
+    if (countdown === 0) {
       clearInterval(startCountdown);
-      countDownBoard.textContent = `aloha * ${score} gnomes` 
       gameOver() 
     }
   }, 1000)
 }
 
 startBtn.addEventListener('click', startGame);
+restartBtn.addEventListener('click', startGame);
 audBtn.addEventListener('click', muteUnmute);
 
 
@@ -117,4 +118,7 @@ document.getElementById('modal-close-btn').addEventListener("click", function() 
   document.getElementById('mask').classList.remove("active");
 });
 
+document.getElementById('modal-close-btn2').addEventListener("click", function() {
+  document.getElementById('game-over-container').classList.remove("up");
+});
 

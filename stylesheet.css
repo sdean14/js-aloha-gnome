@@ -22,7 +22,7 @@ body {
   overflow: hidden;
 }
 
-.score {
+.countdown {
   font-size: 150px;
   color: #fff;
   position: absolute;
@@ -35,7 +35,7 @@ body {
   z-index: 3;
 }
 
-.countdown {
+.score {
   position: absolute;
   top: 30px;
   width: 100%;
@@ -43,6 +43,7 @@ body {
   text-align: center;
   color: black;
   z-index: 3;
+  opacity: 0;
 }
  
 button {
@@ -58,25 +59,27 @@ button {
   outline: none;
 }
 .start-btn {
-  position: relative;
+  /* position: relative; */
   transform: translate(-50%, 0);
   background: rgb(46, 207, 202);
 }
 .aud-btn {
-  position: relative;
+  /* position: relative; */
   transform: translate(-50%, 0);
   background: rgb(255, 78, 98);
 }
 .about-btn {
   z-index: 0;
-  position: relative;
+  /* position: relative; */
   background: rgb(248, 223, 119);
 }
 .header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  max-width: 800px;
+  max-width: 1000px;
+  padding-left: 10%;
+  padding-top: 20px;
 }
 
 .game {
@@ -326,7 +329,8 @@ background-size: contain;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(.95);
-  background:  rgb(181, 196, 193);
+  background:  rgb(250, 184, 62);
+  color: rgb(15, 173, 207);
   padding: 20px;
   border-radius: 5px;
   z-index: 2;
@@ -347,18 +351,23 @@ background-size: contain;
   text-align: center;
   margin-bottom: 10px;
   font-size: 40px;
-  color:rgb(76, 76, 97);
+  color:  rgb(38, 155, 75);
 }
 .modal-content {
   padding: 20px 50px;
   font-size: 30px;
-  background: #fff;
-  border: solid 10px rgb(151, 159, 169);
+  background: rgb(251, 254, 237);
+  border: solid 10px rgb(22, 210, 187);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal-close-btn {
   position: relative;
+  background:rgb(255, 99, 131);
+  border-radius: 10px;
   margin-top: 40px;
-  padding: 10px 50px;
+  padding: 10px 40px;
 }
 
 /* z-index is usable only with position... */
@@ -381,13 +390,13 @@ background-size: contain;
   visibility: visible;
 }
 
-.game-over {
+.game-over-container {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(.95);
   background:  rgb(46, 207, 202);
-  padding: 20px;
+  padding: 40px;
   border-radius: 5px;
   z-index: 2;
   opacity: 0;
@@ -402,7 +411,16 @@ background-size: contain;
   text-align: center;
   color: rgb(248, 223, 119);
 } 
-.game-over.up {
+.game-over-container.up {
   opacity: 0.9;
   visibility: visible;
+}
+.game-over {
+  margin-bottom: 70px;
+}
+.restart-btn {
+  background: rgb(116, 207, 160);
+}
+.modal-close-btn2 {
+  background: rgb(213, 240, 165) ;
 }
