@@ -14,3 +14,4 @@
 ## Rules
 Press start button to start playing.
 How many gnomes can you put aloha shirts on in 20 seconds?
+Press mute button if you like to play quietly.
