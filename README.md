@@ -14,4 +14,10 @@
 ## Rules
 Press start button to start playing.
 How many gnomes can you put aloha shirts on in 20 seconds?
+![](image/Screenshot-about)
+
 Press mute button if you like to play quietly.
+![](image/Screenshot-game)
+
+times up, how many gnomes did you click?
+![](image/Screenshot-timeup)
