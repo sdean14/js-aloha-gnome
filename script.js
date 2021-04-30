@@ -13,7 +13,7 @@ let timeLimit = 20000;
 let score = 0;
 let countdown;
 let audPlay = false;
-
+console.log('code updated')
 var playPromise = aud.play();
 
 // In browsers that don’t yet support this functionality,
