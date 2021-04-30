@@ -4,7 +4,6 @@ const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
 const aud = new Audio('/audio/sotr.mp3');
-aud.crossOrigin="anonymous" 
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
@@ -17,19 +16,18 @@ let countdown;
 let audPlay = false;
 
 function muteUnmute() {
-  if (aud && audPlay === true) {
+  if (audPlay === true) {
     aud.pause()    
     audPlay = false;
     audBtn.textContent = 'unmute' 
-  } else if (aud && audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
+  } else if (audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
     aud.play()
     audPlay = true;
     audBtn.textContent = 'mute'
   } else {
-    if(aud){
     aud.pause()
     audPlay = false;
-    audBtn.textContent = 'unmute'}
+    audBtn.textContent = 'unmute'
   }
 }
 
