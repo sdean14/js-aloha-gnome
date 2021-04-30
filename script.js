@@ -5,6 +5,7 @@ const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
 const aud = new Audio('/audio/sotr.mp3');
 aud.muted = true;
+aud.crossOrigin = 'anonymous';
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
