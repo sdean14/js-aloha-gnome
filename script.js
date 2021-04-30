@@ -16,7 +16,7 @@ let countdown;
 let audPlay = false;
 
 function muteUnmute() {
-  if (audPlay === true && aud) {
+  if (audPlay === true) {
     aud.pause()    
     audPlay = false;
     audBtn.textContent = 'unmute' 
