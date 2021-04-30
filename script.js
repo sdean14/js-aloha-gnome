@@ -8,7 +8,6 @@ aud.muted = true;
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
-
 let lastSpot;
 let timeUp = false;
 let timeLimit = 20000;
@@ -27,6 +26,7 @@ function muteUnmute() {
     audPlay = true;
     audBtn.textContent = 'mute'
   } else {
+    aud.muted =true;
     aud.pause()
     audPlay = false;
     audBtn.textContent = 'unmute'
