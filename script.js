@@ -3,7 +3,7 @@ const scoreBoard = document.querySelector('.score');
 const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
-const aud = new Audio(require('/audio/Israel_IZ_Kamakawiwoʻole-SomewhereOverTheRainbow.mp3'));
+const aud = new Audio('/audio/Israel_IZ_Kamakawiwoʻole-SomewhereOverTheRainbow.mp3');
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
@@ -52,6 +52,7 @@ function popOut() {
 }
 
 function startGame() {
+  aud.load();
   countdown = timeLimit/1000;
   scoreBoard.textContent= 0;
   scoreBoard.style.display = 'block';
