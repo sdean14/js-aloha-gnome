@@ -2,7 +2,7 @@
 
 
 # aloha gnome
-[aloha gnome](https://tomobook.herokuapp.com/#/login) whack a mole style game where you put aloha shirts on gnomes as they pop out. 
+[aloha gnome](https://sdean14.github.io/js-aloha-gnome/) whack a mole style game where you put aloha shirts on gnomes as they pop out. 
 
 
 ## Technologies 
