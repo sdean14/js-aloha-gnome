@@ -17,18 +17,19 @@ let countdown;
 let audPlay = false;
 
 function muteUnmute() {
-  if (audPlay === true) {
+  if (aud && audPlay === true) {
     aud.pause()    
     audPlay = false;
     audBtn.textContent = 'unmute' 
-  } else if (audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
+  } else if (aud && audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
     aud.play()
     audPlay = true;
     audBtn.textContent = 'mute'
   } else {
+    if(aud){
     aud.pause()
     audPlay = false;
-    audBtn.textContent = 'unmute'
+    audBtn.textContent = 'unmute'}
   }
 }
 
