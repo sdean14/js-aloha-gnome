@@ -20,7 +20,7 @@ function muteUnmute() {
     aud.pause()    
     audPlay = false;
     audBtn.textContent = 'unmute' 
-  } else if (audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
+  } else if (aud && audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
     aud.muted =false;
     aud.play()
     audPlay = true;
