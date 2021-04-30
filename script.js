@@ -52,7 +52,6 @@ function popOut() {
 }
 
 function startGame() {
-  aud.load();
   countdown = timeLimit/1000;
   scoreBoard.textContent= 0;
   scoreBoard.style.display = 'block';
