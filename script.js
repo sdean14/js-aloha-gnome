@@ -4,8 +4,6 @@ const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
 const aud = new Audio('/audio/sotr.mp3');
-aud.muted = true;
-aud.crossOrigin = 'anonymous';
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
@@ -16,12 +14,26 @@ let score = 0;
 let countdown;
 let audPlay = false;
 
+var playPromise = aud.play();
+
+// In browsers that don’t yet support this functionality,
+// playPromise won’t be defined.
+if (playPromise !== undefined) {
+  playPromise.then(function() {
+    // Automatic playback started!
+  }).catch(function(error) {
+    // Automatic playback failed.
+    // Show a UI element to let the user manually start playback.
+    console.log(error)
+  });
+}
+
 function muteUnmute() {
   if (audPlay === true) {
     aud.pause()    
     audPlay = false;
     audBtn.textContent = 'unmute' 
-  } else if (aud && audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
+  } else if (audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
     aud.muted =false;
     aud.play()
     audPlay = true;
