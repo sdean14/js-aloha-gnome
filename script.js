@@ -3,7 +3,8 @@ const scoreBoard = document.querySelector('.score');
 const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
-const aud = new Audio('/audio/sotr.mp3');
+// const aud = new Audio('/audio/sotr.mp3');
+const aud = document.querySelector('.sound')
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
@@ -14,19 +15,7 @@ let score = 0;
 let countdown;
 let audPlay = false;
 console.log('code updated3')
-var playPromise = aud.play();
 
-// In browsers that don’t yet support this functionality,
-// playPromise won’t be defined.
-if (playPromise !== undefined) {
-  playPromise.then(function() {
-    // Automatic playback started!
-  }).catch(function(error) {
-    // Automatic playback failed.
-    // Show a UI element to let the user manually start playback.
-    console.log(error)
-  });
-}
 
 function muteUnmute() {
   if (audPlay === true) {
@@ -34,12 +23,12 @@ function muteUnmute() {
     audPlay = false;
     audBtn.textContent = 'unmute' 
   } else if (audBtn.textContent === 'unmute' || audBtn.textContent === '♪') {
-    aud.muted =false;
-    aud.play()
+   aud.muted= false;
+    aud.play();
     audPlay = true;
     audBtn.textContent = 'mute'
   } else {
-    aud.muted =true;
+   
     aud.pause()
     audPlay = false;
     audBtn.textContent = 'unmute'
@@ -78,6 +67,7 @@ function startGame() {
   setTimeout(function(){
     timeUp = true;
   }, timeLimit);
+  aud.muted = false;
   aud.play();
   aud.loop = true;
   audPlay = true;
