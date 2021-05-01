@@ -14,7 +14,7 @@ let timeLimit = 20000;
 let score = 0;
 let countdown;
 let audPlay = false;
-console.log('code updated3')
+// console.log('code updated3')
 
 
 function muteUnmute() {
@@ -67,11 +67,11 @@ function startGame() {
   setTimeout(function(){
     timeUp = true;
   }, timeLimit);
-  aud.muted = false;
-  aud.play();
-  aud.loop = true;
-  audPlay = true;
-  audBtn.textContent = 'mute'
+  // aud.muted = false;
+  // aud.play();
+  // aud.loop = true;
+  // audPlay = true;
+  // audBtn.textContent = 'mute'
 
 
   let startCountdown = setInterval(function() {
