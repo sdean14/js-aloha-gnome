@@ -7,7 +7,6 @@
 
 ## Technologies 
 * Javascript
-* JQuery
 * CSS
 * HTML
 
