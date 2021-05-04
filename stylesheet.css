@@ -234,7 +234,6 @@ background-size: contain;
   z-index: 2;
 }
 
-/* pop up effct */
 .gnome.small.one {
   background-size: 50%;
   left: 100%;
@@ -316,7 +315,7 @@ background-size: contain;
 .spot.up .gnome.large.nine {
   top: -4%;
 }
-/* modal */
+
 .modal-open {
   position: fixed;
   top: 50%;
@@ -363,7 +362,6 @@ background-size: contain;
   padding: 10px 40px;
 }
 
-/* z-index is usable only with position... */
 .mask {
   position: fixed;
   top: 0;
