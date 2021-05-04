@@ -127,14 +127,12 @@ button {
   position: absolute;
   z-index: 2;
   right: 5%;
-  /* left: auto; */
   width: 60%;
   height: 60%;
   bottom: -1%;
   background-size: contain;
 }
 
-/* custus cactus 3 5 */
 .spot3:after {
 content: '';
 display: block;
