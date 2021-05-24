@@ -58,28 +58,32 @@ button {
   border: none;
   outline: none;
 }
+
+/* header container */
+.header-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* left: 25%;
+  width: 800px;
+  padding-left: 10%;
+  padding-top: 30px;
+ */
+}
 .start-btn {
   transform: translate(-50%, 0);
   background: rgb(46, 207, 202);
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 .aud-btn {
   transform: translate(-50%, 0);
   background: rgb(255, 78, 98); 
 }
 .about-btn {
-  z-index: 0;
+  /* z-index: 0; */
+  transform: translate(-50%, 0);
   background: rgb(248, 223, 119);
-}
-.header-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  left: 25%;
-  width: 800px;
-  padding-left: 10%;
-  padding-top: 30px;
 }
 
 .game {
