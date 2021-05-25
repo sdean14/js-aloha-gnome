@@ -3,19 +3,25 @@ const scoreBoard = document.querySelector('.score');
 const gnomes = document.querySelectorAll('.gnome');
 const countDownBoard = document.querySelector('.countdown');
 const startBtn = document.querySelector('.start-btn');
-// const aud = new Audio('/audio/sotr.mp3');
 const aud = document.querySelector('.sound')
 const audBtn = document.querySelector('.aud-btn');
 const gameOverModal = document.querySelector('.game-over-container');
 const restartBtn= document.querySelector('.restart-btn');
+const body = document.body;
+body.onload = onloadModal;
+
 let lastSpot;
 let timeUp = false;
 let timeLimit = 20000;
 let score = 0;
 let countdown;
 let audPlay = false;
-// console.log('code updated3')
 
+
+function onloadModal() {
+  document.getElementById('modal-open').classList.add("active");
+  document.getElementById('mask').classList.add("active");
+}
 
 function muteUnmute() {
   if (audPlay === true) {
