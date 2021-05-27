@@ -75,8 +75,7 @@ function startGame() {
   }, timeLimit);
   // aud.muted = false;
   // aud.play();
-  // aud.loop = true;
-
+  
 
 
   let startCountdown = setInterval(function() {
