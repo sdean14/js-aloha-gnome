@@ -73,10 +73,8 @@ function startGame() {
   setTimeout(function(){
     timeUp = true;
   }, timeLimit);
-  // aud.muted = false;
+ 
   
-  
-
 
   let startCountdown = setInterval(function() {
     countdown -= 1;
