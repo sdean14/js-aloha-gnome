@@ -74,7 +74,6 @@ function startGame() {
     timeUp = true;
   }, timeLimit);
  
-  
 
   let startCountdown = setInterval(function() {
     countdown -= 1;
