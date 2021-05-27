@@ -74,7 +74,7 @@ function startGame() {
     timeUp = true;
   }, timeLimit);
   // aud.muted = false;
-  // aud.play();
+  
   
 
 
