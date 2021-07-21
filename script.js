@@ -110,6 +110,7 @@ function whack(e) {
   // gnome with aloha shirt
   this.style.backgroundImage = 'url("./image/gnorm02-t.png")';
   this.style.pointerEvents = 'none';
+  //ES6 arrow to bind 'this'
   setTimeout(() => {
     this.style.backgroundImage = 'url("./image/gnorm01-t.png")';
     this.style.pointerEvents = 'all';
